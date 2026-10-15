@@ -490,4 +490,4 @@ while True:
 
 if escaped_school == True:
     print("YAY YOU MADE IT CONGRATS!!!")
-    print("this probably took you long to escape, its okay it took me even longer to make <3")
+    print("this probably took you long to escape, its okay it took me even longer to make! <3")
