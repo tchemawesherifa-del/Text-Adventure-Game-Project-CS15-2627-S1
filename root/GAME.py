@@ -1,4 +1,3 @@
-
 found_number = False
 security_code_number = 7
 found_small_key = False
@@ -472,6 +471,11 @@ while True:
                 found_red_key = True
                 print("Now return to the hallway, then go to the locker room.")
                 print("Choose option 3 in the locker room to escape!")
+
+                # FIX: return to the hallway after getting the RED key
+                print("You leave the Security Room and return to the hallway.")
+                room = "hallway"
+
             else:
                 print("The keypad flashes red.")
                 print("Incorrect code! try again when you have figured it out <3")
