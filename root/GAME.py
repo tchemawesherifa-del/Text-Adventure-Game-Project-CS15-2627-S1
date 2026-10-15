@@ -1,3 +1,4 @@
+
 found_number = False
 security_code_number = 7
 found_small_key = False
@@ -61,13 +62,13 @@ while True:
             print("3. Try to escape through the main exit")
             choice = input("Choose 1, 2 or 3: ")
 
-            while choice != "1" and choice != "2" and choice != "3":
+            while choice not in ["1", "2", "3"]:
                 print("Please choose 1, 2 or 3.")
                 choice = input("Choose 1, 2 or 3: ")
         else:
             choice = input("Choose 1 or 2: ")
 
-            while choice != "1" and choice != "2":
+            while choice not in ["1", "2"]:
                 print("Please choose 1 or 2.")
                 choice = input("Choose 1 or 2: ")
 
@@ -96,10 +97,6 @@ while True:
                 print("Congratulations! You escaped School Mystery!")
                 escaped_school = True
                 break
-            else:
-                print("You try the exit again, but it's still locked.")
-                print("Narrator: okay door, we get it. you're locked.")
-                print("You need to find the RED key first.")
 
     elif room == "gym":
         print("\nYou are in the gym.")
@@ -113,7 +110,7 @@ while True:
 
         gym_choice = input("Choose 1, 2, 3 or 4: ")
 
-        while gym_choice != "1" and gym_choice != "2" and gym_choice != "3" and gym_choice != "4":
+        while gym_choice not in ["1", "2", "3", "4"]:
             print("Please choose 1, 2, 3 or 4.")
             gym_choice = input("Choose 1, 2, 3 or 4: ")
 
@@ -233,7 +230,7 @@ while True:
 
         science_choice = input("Choose 1, 2 or 3: ")
 
-        while science_choice != "1" and science_choice != "2" and science_choice != "3":
+        while science_choice not in ["1", "2", "3"]:
             print("Please choose 1, 2 or 3.")
             science_choice = input("Choose 1, 2 or 3: ")
 
@@ -287,7 +284,7 @@ while True:
 
         math_choice = input("Choose 1 or 2: ")
 
-        while math_choice != "1" and math_choice != "2":
+        while math_choice not in ["1", "2"]:
             print("Please choose 1 or 2.")
             math_choice = input("Choose 1 or 2: ")
 
@@ -320,7 +317,7 @@ while True:
 
         office_choice = input("Choose 1 or 2: ")
 
-        while office_choice != "1" and office_choice != "2":
+        while office_choice not in ["1", "2"]:
             print("Please choose 1 or 2.")
             office_choice = input("Choose 1 or 2: ")
 
@@ -354,7 +351,7 @@ while True:
 
         library_choice = input("Choose 1 or 2: ")
 
-        while library_choice != "1" and library_choice != "2":
+        while library_choice not in ["1", "2"]:
             print("Please choose 1 or 2.")
             library_choice = input("Choose 1 or 2: ")
 
@@ -389,7 +386,7 @@ while True:
 
         cafeteria_choice = input("Choose 1, 2 or 3: ")
 
-        while cafeteria_choice != "1" and cafeteria_choice != "2" and cafeteria_choice != "3":
+        while cafeteria_choice not in ["1", "2", "3"]:
             print("Please choose 1, 2 or 3.")
             cafeteria_choice = input("Choose 1, 2 or 3: ")
 
@@ -427,7 +424,7 @@ while True:
 
         computer_choice = input("Choose 1 or 2: ")
 
-        while computer_choice != "1" and computer_choice != "2":
+        while computer_choice not in ["1", "2"]:
             print("Please choose 1 or 2.")
             computer_choice = input("Choose 1 or 2: ")
 
@@ -456,16 +453,16 @@ while True:
         print("2. Look at the monitors")
         print("3. Return to the hallway")
 
-        security_choice = input("Choose 1, 2 or 3: ")
+        security_choice = input("Choose 1, 2 or 3: ").strip()
 
-        while security_choice != "1" and security_choice != "2" and security_choice != "3":
+        while security_choice not in ["1", "2", "3"]:
             print("Please choose 1, 2 or 3.")
-            security_choice = input("Choose 1, 2 or 3: ")
+            security_choice = input("Choose 1, 2 or 3: ").strip()
 
         if security_choice == "1":
             print("Narrator: You stare at the keypad.")
             print("Think about the clues you've found!")
-            code = input("Enter the 4-digit security code: ")
+            code = input("Enter the 4-digit security code: ").strip()
 
             if code == "3742":
                 print("The keypad beeps.")
@@ -473,6 +470,8 @@ while True:
                 print("Inside is the special RED key!")
                 print("Narrator: FINALLY. we are so out of here.")
                 found_red_key = True
+                print("Now return to the hallway, then go to the locker room.")
+                print("Choose option 3 in the locker room to escape!")
             else:
                 print("The keypad flashes red.")
                 print("Incorrect code! try again when you have figured it out <3")
